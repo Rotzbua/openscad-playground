@@ -19,7 +19,7 @@ export default {
   },
   codeLens: true,
   // language: 'javascript',
-  wordBasedSuggestions: false,
+  wordBasedSuggestions: 'off',
 } as monaco.editor.IStandaloneEditorConstructionOptions;
 
 // monaco.editor.IModelContentChangedEvent
@@ -27,13 +27,13 @@ export default {
 // function SCADEditor({input, onInputChanged, ...props}: {input: string, onInputChanged: (value?: string) => void, height: string}) {
 
 //   // let editor: monaco.editor.IStandaloneCodeEditor;
-  
+
 //   // function editorDidMount(e) {
 //   //   editor = e;
 //   //   console.log('editorDidMount', monaco.languages.getLanguages(), editor);
 //   //   // editor.
 //   //   editor.setModel(monaco.editor.createModel('sphere(123);', 'openscad'));
-//   //   // editor.trigger('anything', 'editor.action.triggerSuggest', {});    
+//   //   // editor.trigger('anything', 'editor.action.triggerSuggest', {});
 //   // }
 
 //   return (
