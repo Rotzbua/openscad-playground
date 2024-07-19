@@ -1,15 +1,15 @@
 // Portions of this file are Copyright 2021 Google LLC, and licensed under GPL2+. See COPYING.
 
-import { CSSProperties, useContext } from 'react';
-import { TreeSelect } from 'primereact/treeselect';
-import TreeNode from 'primereact/treenode';
-import { ModelContext, FSContext } from './contexts';
-// import { isFileWritable } from '../state/model';
-import { join } from '../fs/filesystem';
-import { defaultSourcePath } from '../state/initial-state';
-import { zipArchives } from '../fs/zip-archives';
+import {TreeNode} from 'primereact/treenode';
+import {TreeSelect} from 'primereact/treeselect';
+import {CSSProperties, useContext} from 'react';
 
-const biasedCompare = (a: string, b: string) => 
+import {join} from '../fs/filesystem';
+import {zipArchives} from '../fs/zip-archives';
+import {defaultSourcePath} from '../state/initial-state';
+import {FSContext, ModelContext} from './contexts';
+
+const biasedCompare = (a: string, b: string) =>
   a === 'openscad' ? -1 : b === 'openscad' ? 1 : a.localeCompare(b);
 
 function listFilesAsNodes(fs: FS, path: string, accept?: (path: string) => boolean): TreeNode[] {
@@ -92,7 +92,7 @@ export default function FilePicker({className, style}: {className?: string, styl
   const fsItems = fs && listFilesAsNodes(fs, '/')
 
   return (
-      <TreeSelect 
+      <TreeSelect
           className={className}
           title='OpenSCAD Playground Files'
           value={state.params.sourcePath}
