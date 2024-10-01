@@ -43,17 +43,19 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { 
+        {
           from: path.resolve(__dirname, 'public'),
           toType: 'dir',
         },
-        { 
+        {
           from: path.resolve(__dirname, 'node_modules/primeicons/fonts'),
           to: path.resolve(__dirname, 'dist/fonts'),
           toType: 'dir',
         },
-        { 
+        {
           from: path.resolve(__dirname, 'src/wasm/openscad.js'),
+        },
+        {
           from: path.resolve(__dirname, 'src/wasm/openscad.wasm'),
         },
       ],
