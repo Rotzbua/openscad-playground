@@ -60,7 +60,7 @@ export const checkSyntax =
     });
   });
 
-var renderDelay = 1000;
+const renderDelay = 1000;
 export type RenderOutput = {stlFile: File, logText: string, markers: monaco.editor.IMarkerData[], elapsedMillis: number}
 
 export type RenderArgs = {

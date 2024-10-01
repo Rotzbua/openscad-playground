@@ -110,7 +110,7 @@ export async function createEditorFS({prefix, allowPersistence}: {prefix: string
     },
   });
 
-  var fs = BrowserFS.BFSRequire('fs');
+  const fs = BrowserFS.BFSRequire('fs');
   // const symlink = (target, source) => new Promise((res, rej) => fs.symlink(target, source, (err) => err ? rej(err) : res()));
 
   // await setupLibraries(archiveNames, symlink, '/libraries', workingDir);

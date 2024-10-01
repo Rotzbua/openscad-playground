@@ -90,7 +90,7 @@ var conf: monaco.languages.LanguageConfiguration = {
   }
 };
 
-var language: monaco.languages.IMonarchLanguage = {
+const language: monaco.languages.IMonarchLanguage = {
   defaultToken: "invalid",
   tokenPostfix: ".js",
   keywords: [...builtInFunctionNames, ...builtInModuleNames, ...builtInVarNames, 'each'],

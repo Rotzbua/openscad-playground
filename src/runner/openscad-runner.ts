@@ -32,8 +32,8 @@ export type OpenSCADInvocationResults = {
 }
 
 export function spawnOpenSCAD(invocation: OpenSCADInvocation): AbortablePromise<OpenSCADInvocationResults> {
-  var worker: Worker | null;
-  var rejection: (err: any) => void;
+  let worker: Worker | null;
+  let rejection: (err: any) => void;
 
   function terminate() {
     if (!worker) {
