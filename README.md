@@ -52,7 +52,7 @@ The project uses a **webpack-based build system** that reads library metadata fr
 
 Prerequisites:
 *   wget or curl
-*   Node.js (>=18.12.0)
+*   Node.js (>=22)
 *   npm
 *   git
 *   zip
