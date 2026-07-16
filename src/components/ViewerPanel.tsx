@@ -4,11 +4,12 @@ import { CSSProperties, useCallback, useContext, useEffect, useRef, useState } f
 import { ModelContext } from './contexts.ts';
 import { Toast } from 'primereact/toast';
 import { blurHashToImage, imageToBlurhash, imageToThumbhash, thumbHashToImage } from '../io/image_hashes.ts';
+import { ModelViewerElement } from '@google/model-viewer';
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      "model-viewer": any;
+      "model-viewer": Partial<ModelViewerElement>;
     }
   }
 }
